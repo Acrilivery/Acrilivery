@@ -12,20 +12,21 @@ class Articolo {
     this.#prezzo = price;
     this.#composizione = composition;
   }
-  get nomeProdotto() {
+
+  getNomeProdotto() {
     return this.#nomeProdotto;
   }
 
-  get disponibilita() {
+  getDisponibilita() {
     return this.#disponibilita;
   }
-  get descrizione() {
+  getDescrizione() {
     return this.#descrizione;
   }
-  get prezzo() {
+  getPrezzo() {
     return this.#prezzo;
   }
-  get composizione() {
+  getComposizione() {
     return this.#composizione;
   }
 }
