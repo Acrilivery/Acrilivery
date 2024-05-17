@@ -35,7 +35,7 @@ class Ordine {
   getIndirizzo() {
     return this.#indirizzo;
   }
-  gettatus() {
+  getStatus() {
     return this.#status;
   }
   getOrario() {
