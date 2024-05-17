@@ -16,22 +16,32 @@ class Utente {
     this.#codiceFiscale = codiceFiscale;
   }
 
-  get nome() {
+  registrati() {}
+
+  compra() {}
+
+  cambioCredenziali() {}
+
+  recuperaPassword() {}
+
+  login() {}
+
+  getNome() {
     return this.#nome;
   }
-  get cognome() {
+  getCognome() {
     return this.#cognome;
   }
-  get email() {
+  getEmail() {
     return this.#email;
   }
-  get password() {
+  getPassword() {
     return this.#password;
   }
-  get indirizzo() {
+  getIndirizzo() {
     return this.#indirizzo;
   }
-  get codiceFiscale() {
+  getCodiceFiscale() {
     return this.#codiceFiscale;
   }
 }

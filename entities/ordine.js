@@ -12,6 +12,14 @@ class Ordine {
     this.#status = "pagato";
   }
 
+  tracciaOrdine() {}
+
+  aggiungiIndirizzo() {}
+
+  anullaOrdine() {}
+
+  aggiungiMetodoPagamento() {}
+
   get prodotto() {
     return this.#prodotto;
   }
