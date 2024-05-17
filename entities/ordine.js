@@ -5,29 +5,44 @@ class Ordine {
   #indirizzo;
   #status;
   #orario;
-  constructor(prezzo, pagamento) {
-    this.#prezzo = prezzo;
+  #id;
+  constructor(prezzo, pagamento, prodotti) {
+    this.#prezzo = this.#calculateTotalPrice();
     this.#attributoPagamento = pagamento;
-    this.#orario = new Date();
+    this.#orario = new Date(Date.now());
     this.#status = "pagato";
+    this.#prodotto = prodotti;
+    this.#id = this.#randomID;
   }
-
-  get prodotto() {
+  #calculateTotalPrice()
+  {
+    function Sum(acc, el)
+    {
+      return acc + el.getPrezzo();
+    }
+    return this.#prodotto.reduce(Sum, 0);
+  }
+  getProdotto() {
+    
     return this.#prodotto;
   }
-  get prezzo() {
+  getPrezzo() {
     return this.#prezzo;
   }
-  get attributoPagamento() {
+  getMetodoPagamento() {
     return this.#attributoPagamento;
   }
-  get indirizzo() {
+  getIndirizzo() {
     return this.#indirizzo;
   }
-  get status() {
+  gettatus() {
     return this.#status;
   }
-  get orario() {
+  getOrario() {
     return this.#orario;
+  }
+  #randomID()
+  {
+    return Math.random()*1000;
   }
 }
