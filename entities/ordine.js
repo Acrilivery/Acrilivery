@@ -14,16 +14,13 @@ class Ordine {
     this.#prodotto = prodotti;
     this.#id = this.#randomID;
   }
-  #calculateTotalPrice()
-  {
-    function Sum(acc, el)
-    {
+  #calculateTotalPrice() {
+    function Sum(acc, el) {
       return acc + el.getPrezzo();
     }
     return this.#prodotto.reduce(Sum, 0);
   }
   getProdotto() {
-    
     return this.#prodotto;
   }
   getPrezzo() {
@@ -41,8 +38,9 @@ class Ordine {
   getOrario() {
     return this.#orario;
   }
-  #randomID()
-  {
-    return Math.random()*1000;
+  #randomID() {
+    return Math.random() * 1000;
   }
 }
+
+//prova prova VIVA IL DUCE
