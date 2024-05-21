@@ -1,14 +1,16 @@
 const User = require("./user.js");
 
 class ControllerUsers
+{
+  #users = [];
+  addUser(nome, cognome, email, password, indirizzo, codiceFiscale)
   {
-    #users = [];
-    addUser()
-    {
-      
-    }
-    getUsers()
-    {
-      return this.#users;
-    }
+    const user = new User(nome, cognome, email, password, indirizzo, codiceFiscale);
+    this.#users.push(user);
   }
+  getUsers()
+  {
+    return this.#users;
+  }
+}
+module.export = Users;
