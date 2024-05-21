@@ -4,13 +4,15 @@ class Articolo {
   #descrizione;
   #prezzo;
   #composizione;
+  #id;
 
-  constructor(nome, disp, desc, price, composition) {
+  constructor(nome, disp, desc, price, composition, randomID) {
     this.#nomeProdotto = nome;
     this.#disponibilita = disp;
     this.#descrizione = desc;
     this.#prezzo = price;
     this.#composizione = composition;
+    this.#id = randomID;
   }
 
   getNomeProdotto() {
@@ -28,6 +30,10 @@ class Articolo {
   }
   getComposizione() {
     return this.#composizione;
+  }
+
+  getId() {
+    return this.#id;
   }
 }
 
