@@ -14,16 +14,13 @@ class Ordine {
     this.#prodotto = prodotti;
     this.#id = this.#randomID;
   }
-  #calculateTotalPrice()
-  {
-    function Sum(acc, el)
-    {
+  #calculateTotalPrice() {
+    function Sum(acc, el) {
       return acc + el.getPrezzo();
     }
     return this.#prodotto.reduce(Sum, 0);
   }
   getProdotto() {
-    
     return this.#prodotto;
   }
   getPrezzo() {
@@ -35,14 +32,16 @@ class Ordine {
   getIndirizzo() {
     return this.#indirizzo;
   }
-  gettatus() {
+  getStatus() {
     return this.#status;
   }
   getOrario() {
     return this.#orario;
   }
-  #randomID()
-  {
-    return Math.random()*1000;
+  getID() {
+    return this.#id;
+  }
+  #randomID() {
+    return Math.random() * 1000;
   }
 }
