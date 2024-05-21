@@ -1,4 +1,7 @@
+const Users = require();
+
 class App {
+    #users;
     registrati() {}
 
   compra() {}
