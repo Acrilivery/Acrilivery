@@ -43,6 +43,6 @@ class App {
   recuperaPassword() {}
 
   compra() {
-    
+
   }
 }
