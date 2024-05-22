@@ -16,16 +16,6 @@ class Utente {
     this.#codiceFiscale = codiceFiscale;
   }
 
-  registrati() {}
-
-  compra() {}
-
-  cambioCredenziali() {}
-
-  recuperaPassword() {}
-
-  login() {}
-
   getNome() {
     return this.#nome;
   }
@@ -43,5 +33,11 @@ class Utente {
   }
   getCodiceFiscale() {
     return this.#codiceFiscale;
+  }
+  getMetodiDiPagamento() {
+    return this.#metodoDiPagamento;
+  }
+  getId() {
+    return this.#idUtente;
   }
 }

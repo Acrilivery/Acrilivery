@@ -12,15 +12,24 @@ class ControllerArticles {
   }
 
   getArticle(id) {
-    return this.#articles.find((article) => article.getId() === id);
+    function OnFind(el) {
+      return el.getId() === id;
+    }
+    return this.#articles.find(OnFind);
   }
 
   deleteArticle(id) {
-    this.#articles = this.#articles.filter((article) => article.getId() !== id);
+    function OnFilter(el) {
+      return el.getId() !== id;
+    }
+    return this.#articles.filter(OnFilter);
   }
 
   updateArticle(id, article) {
-    const index = this.#articles.findIndex((article) => article.getId() === id);
-    this.#articles[index] = article;
+    function OnMap(el) {
+      if (el.getId() === id) return article;
+      else return el;
+    }
+    return this.#articles.find(OnFind);
   }
 }
