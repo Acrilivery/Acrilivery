@@ -23,4 +23,4 @@ class ControllerUsers {
     return this.#users.find(OnFind);
   }
 }
-module.export = Users;
+module.export = ControllerUsers;

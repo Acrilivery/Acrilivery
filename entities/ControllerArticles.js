@@ -1,4 +1,4 @@
-const Articles = require("../entities/articolo.js");
+const Articles = require("../entities/article.js");
 
 class ControllerArticles {
   #articles = [];
@@ -33,3 +33,5 @@ class ControllerArticles {
     return this.#articles.find(OnFind);
   }
 }
+
+module.exports = ControllerArticles;

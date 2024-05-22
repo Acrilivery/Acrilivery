@@ -1,4 +1,4 @@
-const Order = require("./ordine.js");
+const Order = require("./order.js");
 
 class ControllerOrders {
   #orders = [];
@@ -19,4 +19,4 @@ class ControllerOrders {
   }
 }
 
-module.exports = Orders;
+module.exports = ControllerOrders;
