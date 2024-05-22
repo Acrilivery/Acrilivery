@@ -14,6 +14,7 @@ class Utente {
     this.#password = password;
     this.#indirizzo = indirizzo;
     this.#codiceFiscale = codiceFiscale;
+    this.#idUtente = this.#randomID();
   }
 
   getNome() {
@@ -39,5 +40,8 @@ class Utente {
   }
   getId() {
     return this.#idUtente;
+  }
+  #randomID() {
+    return Math.random() * 1000;
   }
 }

@@ -6,13 +6,13 @@ class Articolo {
   #composizione;
   #id;
 
-  constructor(nome, disp, desc, price, composition, randomID) {
+  constructor(nome, disp, desc, price, composition) {
     this.#nomeProdotto = nome;
     this.#disponibilita = disp;
     this.#descrizione = desc;
     this.#prezzo = price;
     this.#composizione = composition;
-    this.#id = randomID;
+    this.#id = this.#randomID();
   }
 
   getNomeProdotto() {
@@ -35,6 +35,7 @@ class Articolo {
   getId() {
     return this.#id;
   }
+  #randomID() {
+    return Math.random() * 1000;
+  }
 }
-
-const prodotto = new Articolo("prodotto", 1, 1, "prodotto di prova", 10);
