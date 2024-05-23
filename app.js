@@ -36,5 +36,7 @@ class App {
 
   recuperaPassword() {}
 
-  compra() {}
+  compra() {
+
+  }
 }
