@@ -32,25 +32,9 @@ class App {
       console.log("Password e/o email sbagliate.");
     }
   }
-  cambioCredenziali(nuovaPassword, nuovaEmail) {
-    this.#currentUser.setPassword(nuovaPassword);
-    this.#currentUser.setEmail(nuovaEmail);
-    if (
-      this.#currentUser.setPassword !== getPassword() &&
-      this.#currentUser.getEmail() !== getEmail()
-    ) {
-      return console.log("Credenziali cambiate con successo");
-    }
-    console.log("riprova");
-  }
+  cambioCredenziali(nuovaPassword, nuovaEmail) {}
 
-  recuperaPassword(nuovaPassword) {
-    if (this.#currentUser.getPassword() === setPassword()) {
-      return console.log("Password recuperata con successo");
-    } else {
-      return console.log("Password sbagliata");
-    }
-  }
+  recuperaPassword() {}
 
   compra() {}
 }
