@@ -11,11 +11,17 @@ class ControllerOrders {
   }
 
   elimateOrder(id) {
-    this.#orders = this.#orders.filter((el) => el.getId() != id);
+     function OnFilter(el) {
+      return el.getId() !== id;
+    }
+    return this.#orders.filter(OnFilter);
   }
 
   getOrder(id) {
-    return this.#orders.find((order) => order.getId() === id);
+     function OnFind(el) {
+      return el.getId() === id;
+    }
+    return this.#orders.find(OnFind);
   }
 }
 
