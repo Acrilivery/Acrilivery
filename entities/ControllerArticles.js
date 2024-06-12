@@ -30,7 +30,7 @@ class ControllerArticles {
       if (el.getId() === id) return article;
       else return el;
     }
-    return this.#articles.find(OnFind);
+    return this.#articles.map(OnFind);
   }
 }
 

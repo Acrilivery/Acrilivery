@@ -6,13 +6,13 @@ class Ordine {
   #status;
   #orario;
   #id;
-  constructor(prezzo, pagamento, prodotti) {
-    this.#prezzo = this.#calculateTotalPrice();
+  constructor(pagamento, prodotti) {    
     this.#attributoPagamento = pagamento;
     this.#orario = new Date(Date.now());
     this.#status = "pagato";
     this.#prodotto = prodotti;
     this.#id = this.#randomID;
+    this.#prezzo = this.#calculateTotalPrice();
   }
   #calculateTotalPrice() {
     function Sum(acc, el) {
