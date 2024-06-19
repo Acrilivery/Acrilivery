@@ -6,7 +6,7 @@ class App {
   #users = new ControllerUsers();
   #orders = new ControllerOrders();
   #articles = new ControllerArticles();
-  #currentUser=null;
+  #currentUser = null;
   registrati(nome, cognome, email, password, indirizzo, codiceFiscale) {
     this.#users.AddUser(
       nome,
@@ -19,26 +19,20 @@ class App {
     console.log("Registrazione avvenuta");
   }
   login(email, password) {
-    function OnFind(el)
-    {
-      if(el.getEmail() === email && el.getPassword() === password)
-        return el;
-      else
-      {
+    function OnFind(el) {
+      if (el.getEmail() === email && el.getPassword() === password) return el;
+      else {
         return null;
       }
     }
     this.#currentUser = this.#users.getUsers().find(OnFind);
-    if(this.#currentUser != null)
-      {
-        console.log("Login avvenuto correttamente.")
-      }
-      else
-      {
-        console.log("Password e/o email sbagliate.")
-      }
+    if (this.#currentUser != null) {
+      console.log("Login avvenuto correttamente.");
+    } else {
+      console.log("Password e/o email sbagliate.");
+    }
   }
-  cambioCredenziali() {}
+  cambioCredenziali(nuovaPassword, nuovaEmail) {}
 
   recuperaPassword() {}
 
